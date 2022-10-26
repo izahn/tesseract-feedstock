@@ -7,7 +7,9 @@ autoreconf -vi
 mkdir build && cd build
 ../configure --prefix="${PREFIX}"
 make -j $CPU_COUNT
+make -j $CPU_COUNT training
 make install
+make training-install
 popd
 
 pushd tessdata_fast
